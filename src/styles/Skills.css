@@ -1,0 +1,89 @@
+/* Skills Section */
+.skills-section {
+  background-color: #000;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Title Styling */
+.skills-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #64f5ff;
+}
+
+/* Subtitle */
+.skills-subtitle {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+/* Skills Category Box */
+.skills-category {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 10px;
+  box-shadow: 0px 0px 12px rgba(100, 245, 255, 0.3);
+}
+
+/* Category Title */
+.category-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #64f5ff;
+}
+
+/* Skills List */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Skill Badge */
+.skill-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.skill-badge svg {
+  font-size: 1.2rem;
+}
+
+.skill-badge:hover {
+  background: rgba(100, 245, 255, 0.3);
+  border-color: #64f5ff;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+  .skills-category {
+    padding: 18px;
+  }
+  .skill-badge {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+}

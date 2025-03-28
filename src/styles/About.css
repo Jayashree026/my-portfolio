@@ -1,0 +1,208 @@
+/* Import Playfair Display font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+/* Pure black background */
+body {
+  background-color: #000 !important;
+}
+
+.about-section {
+  background-color: #000; /* Pure black */
+  color: #f8f9fa;
+  padding: 120px 0;
+  font-family: "Playfair Display", serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle divider */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  color: #fff;
+}
+
+.name-highlight {
+  color: #64f5ff;
+  position: relative;
+  display: inline-block;
+}
+
+.name-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #64f5ff, rgba(100, 245, 255, 0.3));
+  z-index: -1;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+  color: #adb5bd;
+  opacity: 0;
+  animation: fadeInUp 1s 0.2s forwards;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: #dee2e6;
+  max-width: 90%;
+  opacity: 0;
+  animation: fadeInUp 1s 0.4s forwards;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #64f5ff;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(100, 245, 255, 0.4);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s 0.6s forwards;
+}
+
+.resume-btn:hover {
+  background: rgba(100, 245, 255, 0.1);
+  border-color: #64f5ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 245, 255, 0.1);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  opacity: 0;
+  animation: fadeInRight 1s 0.8s forwards;
+}
+
+.skill-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 2px solid rgba(100, 245, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  background: rgba(100, 245, 255, 0.05);
+  border-left: 2px solid #64f5ff;
+  transform: translateY(-4px);
+}
+
+.skill-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.skill-description {
+  font-size: 0.9rem;
+  color: #adb5bd;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-grid {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 80px 0;
+  }
+  
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-section {
+    padding: 60px 0;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+
+  .resume-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+  
+  .skill-item {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+.experience-section {
+  background-color: black;
+  color: white;
+  padding: 60px 0;
+  font-family: "Playfair Display", serif;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #64f5ff;
+  text-transform: uppercase;
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding-left: 30px;
+  /* Removed vertical line-related styles */
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #64f5ff;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  margin-left: 30px;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #64f5ff;
+}
+
+.company {
+  font-weight: 600;
+  color: #64f5ff;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tech-stack {
+  font-style: italic;
+  color: #ccc;
+}
+
+.experience-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-details li {
+  padding: 5px 0;
+  line-height: 1.6;
+}
+
+.experience-details a {
+  color: #64f5ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .company {
+    font-size: 1.1rem;
+  }
+
+  .tech-stack {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .timeline {
+    padding-left: 10px;
+  }
+
+  .timeline-content {
+    padding: 15px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .company {
+    font-size: 1rem;
+  }
+
+  .tech-stack {
+    font-size: 0.8rem;
+  }
+
+  .experience-details li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section {
+    padding: 30px 10px;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .timeline {
+    padding-left: 5px;
+  }
+
+  .timeline-content {
+    padding: 10px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .company {
+    font-size: 0.9rem;
+  }
+
+  .tech-stack {
+    font-size: 0.75rem;
+  }
+
+  .experience-details li {
+    font-size: 0.85rem;
+  }
+}

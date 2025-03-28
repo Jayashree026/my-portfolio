@@ -1,0 +1,74 @@
+/* Apply Playfair Display font */
+.navbar {
+    position: fixed; /* ✅ Keeps navbar at the top while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0a0a0a; /* Pure Black */
+    padding: 12px 25px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+    font-family: "Playfair Display", serif; /* ✅ Font applied */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    z-index: 1000; /* Ensures navbar stays above all content */
+}
+
+/* Prevent Content from Hiding Behind Navbar */
+html {
+    scroll-padding-top: 80px; /* ✅ Fixes issue where headings get hidden */
+    scroll-behavior: smooth;
+}
+
+/* Navbar Brand (Your Name) */
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ffffff !important; /* Pure White */
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: #cccccc !important; /* Light Gray */
+    transform: scale(1.05);
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important; /* Slightly dim white */
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect: Smooth Blue Glow */
+.navbar-nav .nav-link:hover {
+    color: #64f5ff !important; /* Neon Blue */
+}
+
+/* ✅ Removed Hover Underline Effect */
+.navbar-nav .nav-link::after {
+    display: none;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: 1px solid white;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile View */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 12px;
+    }
+}
